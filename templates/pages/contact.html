@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %} | Contact Us {% endblock %}
+{% block content %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Contact Us</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Contact 2 start -->
+<div class="contact-2 content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title text-center">
+            <h1>Contact <span>Us</span></h1>
+        </div>
+        <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+          {% include 'includes/messages.html' %}
+          {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="contact-info-2">
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="flaticon-phone"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>Phone:</h5>
+                                <p><a href="#">+918877887788</a></p>
+                            </div>
+                        </div>
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="flaticon-mail"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>Email:</h5>
+                                <p><a href="#">cardealer@gmail.cm</a></p>
+                            </div>
+                        </div>
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="flaticon-earth"></i>
+                            </div>
+
+                        </div>
+                        <div class="ci-box mb-0">
+                            <div class="icon">
+                                <i class="flaticon-fax"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>Fax:</h5>
+                                <p><a href="#">+91 125-010-0110</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Contact 2 end -->
+
+
+{% endblock %}
